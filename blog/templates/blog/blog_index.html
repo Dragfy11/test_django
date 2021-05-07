@@ -3,7 +3,7 @@
 <h2>Liste des articles:</h2>
 <br>
 {% for article in articles %}
-    <h3> {{ article.title }} </h3>
+    <h3><a href="article/{{ article.title }}"> {{ article.title }} </a></h3>
     <p> {{ article.Author }} </p>
     <br>
 {% endfor %}

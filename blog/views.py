@@ -7,4 +7,6 @@ def blog_index(request):
     return render(request, 'blog/blog_index.html', data)
 
 def article(request, name):
-    return render(request, 'blog/article.html')
+    article = Article.objects.get(title=name)
+    data = {'article': article}
+    return render(request, 'blog/article.html', data)
