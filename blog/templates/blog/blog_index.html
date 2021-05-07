@@ -1,1 +1,9 @@
 <h1>Index du blog</h1>
+<br>
+<h2>Liste des articles:</h2>
+<br>
+{% for article in articles %}
+    <h3> {{ article.title }} </h3>
+    <p> {{ article.Author }} </p>
+    <br>
+{% endfor %}
