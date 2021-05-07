@@ -7,6 +7,9 @@ def blog_index(request):
     return render(request, 'blog/blog_index.html', data)
 
 def article(request, name):
-    article = Article.objects.get(title=name)
-    data = {'article': article}
+    try:
+        article = Article.objects.get(title=name)
+        data = {'article': article}
+    except:
+        data = {'message': 'l\'article que vous avez demandé n\'existe pas'}
     return render(request, 'blog/article.html', data)
