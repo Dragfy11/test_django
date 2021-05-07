@@ -6,3 +6,7 @@ class Article(models.Model):
     body = models.TextField()
     Author = models.CharField(max_length=200)
     date = models.DateField(auto_now=True)
+
+    def __str__(self):
+        return self.title
+    
